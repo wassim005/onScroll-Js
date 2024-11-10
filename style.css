@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: linear-gradient(#4a0039, #220027);
+    height: 100vh;
+}
+
+header{
+    position: fixed;
+    width: 95%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+header h1{
+    margin-left: 50px;
+    text-transform: capitalize;
+}
+
+header .material-icons{
+    display: none;
+}
+
+header .links{
+    margin-right: 30px;
+}
+
+header .links a{
+    padding: 5px 15px;
+    margin: 0px 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+header .links a:hover, .active{
+    background-color: #fff;
+    color: #4a0039;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.main::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top,#4a0039,transparent);
+}
+
+.main img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.main .moon{
+    mix-blend-mode: screen;
+    transform: translateY(40px);
+}
+
+.main h2{
+    color: #fff;
+    font-size: 10px;
+    text-transform: capitalize;
+    transform: translateY(-180px);
+    position: fixed;
+}
+
+.content{
+    padding: 30px;
+}
+
+.content h2{
+    margin: 20px;
+    font-size: 30px;
+}
+
+.content p{
+    margin: 20px;
+}
+
+
+
+
+
+@media (max-width: 1517px){
+    .content{
+        height: 90vh;
+        overflow: hidden;
+    }
+    .main img{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 927px){
+    .content{
+        height: 65vh;
+        overflow: hidden;
+    }
+    header .links{
+        display: none;
+    }
+    header .material-icons{
+        display: inline;
+        cursor: pointer;
+    }
+}
